@@ -24,7 +24,6 @@
 </head>
 
 <body class="is-loading">
-  <!-- Initial Site Intro -->
   <div id="site-intro" class="site-intro">
     <div class="intro-background"></div>
     <div class="intro-content" id="intro-main-content">
@@ -32,16 +31,15 @@
       <div class="intro-subtitle">Experience Roblox as it once was</div>
     </div>
     
-    <div class="intro-warning" id="intro-warning-content">
+    <div class="intro-warning" id="intro-warning-content" role="alertdialog" aria-labelledby="warning-title" aria-describedby="warning-desc">
       <div class="warning-box">
-        <h2>Important Notice</h2>
-        <p>This project is currently a work in progress and serves as a concept. Some features may not function properly or are still being implemented.</p>
+        <h2 id="warning-title">Important Notice</h2>
+        <p id="warning-desc">This project is currently a work in progress...</p>
         <button id="intro-understand-btn" class="btn">I Understand</button>
       </div>
     </div>
-  </div>
 
-  <nav class="top-nav">
+  <nav class="top-nav" role="navigation" aria-label="Main site navigation">
     <a href="#/home" class="nav-logo">
       <img src="images/logo.png" alt="Logo" />
     </a>
@@ -59,17 +57,17 @@
         <a href="#/community" class="top-nav-link">Community</a>
       </li>
     </ul>
-    <button id="sidebar-toggle" class="sidebar-toggle-btn">
+    <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Open sidebar menu">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
     </button>
   </nav>
 
-  <div id="content" class="main-content"></div>
+  <main id="content" class="main-content" role="main">
 
   <div id="sidebar-overlay" class="sidebar-overlay"></div>
-  <div id="sidebar" class="sidebar">
+  <aside id="sidebar" class="sidebar" role="complementary" aria-label="Sidebar menu">
     <div class="sidebar-content">
       <h2>Menu</h2>
       <ul class="sidebar-links">
@@ -89,15 +87,14 @@
         <li><a href="#/patterngenerator">Pattern Generator</a></li>
         <li><a href="#/robloxfontgenerator">Roblox Font Generator</a></li>
       </ul>
-    </div>
+    </aside>
 
     <div class="button-grid">
-      <button class="grid-button mute-toggle" id="mute-toggle">
+      <button class="grid-button mute-toggle" id="mute-toggle" aria-label="Toggle mute">
         <img src="images/misc/muted.png" alt="Muted" class="mute-icon">
       </button>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="intro.js"></script>
   <script src="script.js"></script>
@@ -106,8 +103,6 @@
   <script src="js/pattern-generator-init.js"></script>
   <script src="js/roblox-font-generator.js"></script>
   <script src="js/roblox-font-generator-init.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-
   <script src="config.js"></script>
 </body>
 
